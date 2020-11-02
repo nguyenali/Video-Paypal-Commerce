@@ -1,27 +1,10 @@
-
-const Product = require('./Product');
-
-
-Product.belongsTo(Category, {
-  foreign_key: 'category_id'
-})
-
-
-Category.hasMany(Product, {
-  foreign_key: 'category_id'
-})
-
-
-Product.belongsToMany(Tag, {
-  through: ProductTag,
-  foreign_key: 'product_id'
-})
-
-Tag.belongsToMany(Product, {
-  through: ProductTag,
-  foreign_key: 'tag_id'
-})
+// import models
+const Purchase = require('./Purchase')
+const User = require('./User')
+const Video = require('./Video')
 
 module.exports = {
-  Product
+  Purchase,
+  User,
+  Video
 };
