@@ -139,6 +139,10 @@ section {
     transition: linear .5s;
 }
 
+.video:hover .video-img::after {
+    opacity: 1;
+}
+
 .video:hover .video-img h3, .video:hover .video-img h4 {
     top: 0;
 

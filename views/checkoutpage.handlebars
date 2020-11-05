@@ -12,6 +12,7 @@
 </div>
 
 <script src="https://www.paypal.com/sdk/js?client-id={{clientId}}"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.
+
 </script>
 
 <script>
@@ -27,9 +28,9 @@
     const name = document.createElement('td')
     const qty = document.createElement('td')
 
-    price.innerHTML = cart[item].data.price
-    name.innerHTML = cart[item].data.name
-    qty.innerHTML = cart[item].count
+    price.innerHTML = " | " + cart[item].data.price
+    name.innerHTML = " | " + cart[item].data.name
+    qty.innerHTML = " | " + cart[item].count
 
     row.appendChild(name)
     row.appendChild(price)
@@ -45,16 +46,13 @@
   })
 
 
+
   let total = 0
 
-  Object.keys(cart).forEach( key => {
+  Object.keys(cart).forEach(key => {
     total += cart[key].count * cart[key].data.price
   })
 
-</script>
-
-
-<script>
   //  paypal.Buttons().render('body');
   paypal.Buttons({
     createOrder: function (data, actions) {
@@ -68,7 +66,7 @@
         }]
       });
     },
-    onApprove:function (data, actions) {
+    onApprove: function (data, actions) {
       // This function captures the funds from the transaction.
       return actions.order.capture().then(async function (details) {
         // This function shows a transaction success message to your buyer.
@@ -76,21 +74,21 @@
 
         console.log(details)
 
-        const vids = Object.keys(cart).map( key => {
-              return { id: key, qty : cart[key].count }
-            } )
+        const vids = Object.keys(cart).map(key => {
+          return { id: key, qty: cart[key].count }
+        })
 
+        // sends the confirmed payment details to the server
         await fetch('/purchase', {
-          method : 'POST',
-          headers : {
-            'Content-type' : 'application/json'
+          method: 'POST',
+          headers: {
+            'Content-type': 'application/json'
           },
-          body : JSON.stringify({
-            client_id : 'a@a.com',
-            payment_usd : total,
-            videos: vids
+          body: JSON.stringify({
+            payment_usd: total,
+            videos: vids,
           })
-        } ) 
+        })
 
       });
     }
