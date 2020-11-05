@@ -11,16 +11,12 @@ Purchase.init(
       allowNull : false,
       autoIncrement : true
     },
+    qty : {
+      type: DataTypes.INTEGER
+    },
     video_id : {
       type: DataTypes.INTEGER,
       allowNull: false
-    },
-    payment_usd : {
-      type: DataTypes.DECIMAL,
-      allowNull: false,
-      validate: {
-        isDecimal: true
-      }
     },
     client_id : {
       type: DataTypes.STRING,
