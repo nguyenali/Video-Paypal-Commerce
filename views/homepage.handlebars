@@ -1,11 +1,14 @@
 <!-- "Concept" section-->
 <section id="what-we-do" class="intro">
   <div class="flex-row">
-    <h2 class="section-title primary-border">Who we are </h2>
+    <h2 class="section-title primary-border">HOOK 'LINE 'MASTER</h2>
   </div>
   <div class="flex-row">
     <P>
-      Add in brief description of our Website
+      Learn to fish with our curated videos designed to teach
+      you based on your level of expertise. We provide videos
+      ranging from first-time rookie to those pro-bassmasters
+      looking to further sharpen their hook-line-and-catch skills!
     </P>
   </div>
 </section>
@@ -22,10 +25,12 @@
   <div class="videos-layout">
 
     <article class="video">
-      <div class="video-img">
+      <div class="video-img1">
         <div>
-          <h3>Video 1</h3>
-          <h4>description</h4>
+          <h3>Little Fry</h3>
+          <h4>For those just getting their feet
+              wet and learning the basics of fishing.
+          </h4>
           <button onclick="addToCart({id: 1, name: 'video 1', price: 10.99 })"> ADD TO CART </button>
         </div>
       </div>
@@ -33,10 +38,13 @@
     </article>
 
     <article class="video">
-      <div class="video-img">
+      <div class="video-img2">
         <div>
-          <h3>Video 2</h3>
-          <h4>description</h4>
+          <h3>Intermediate Stripers</h3>
+          <h4>For those wanting to add to their  
+              knowledge and looking to step up
+              and cast off.
+          </h4>
           <button onclick="addToCart({id: 2, name: 'video 2', price: 15.99 })"> ADD TO CART </button>
         </div>
       </div>
@@ -44,10 +52,12 @@
     </article>
 
     <article class="video">
-      <div class="video-img">
+      <div class="video-img3">
         <div id="paypal-button">
-          <h3>Video 3</h3>
-          <h4>description</h4>
+          <h3>Master Angler</h3>
+          <h4>For those looking to surpass their expertise
+              and learn to catch "THE ONE THAT GOT AWAY".
+          </h4>
           <button onclick="addToCart({id: 3, name: 'video 3', price: 12.99 })"> ADD TO CART </button>
         </div>
       </div>
@@ -72,7 +82,7 @@
       },
       body: JSON.stringify({ customerId: 1, cart: cartItems }),
     }); 1
-  
+    //alert(1)
 
     if (success) {
       window.location.replace('/checkout/1')
