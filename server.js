@@ -73,7 +73,7 @@ app.post("/login", async (req, res) => {
 
   try {
     const validUser = await User.findOne(
-      { where: { id: username, password: password } },
+      { where: { username: username, password: password } },
       (err, res) => {
         console.log("validating user...");
       }
@@ -111,11 +111,13 @@ app.post("/checkout", sessionChecker, (req, res) => {
 // });
 
 app.get("/checkout/:id", sessionChecker, async (req, res) => {
-  res.render("checkoutpage", {
+  res.render("checkoutpage",
+  {
     clientId: clientId,
     cart: encodeURIComponent(JSON.stringify(customerOrders[req.params.id])),
   });
-});
+  }
+  )
 
 app.post("/purchase", async (req, res) => {
   const { client_id, payment_usd, videos } = req.body;
