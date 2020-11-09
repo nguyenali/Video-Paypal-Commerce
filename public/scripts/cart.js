@@ -29,13 +29,6 @@ function displayCart() {
 }
 
 
-
-/**
- * Sends a post request to the server 
- * if the post request (which saves the cart) responds with "true"
- * then we redirect the client to the checkout page
- */
-// note: need to change the customer id later for the logged in customer's id
 async function postCartToServer() {
   var success = await fetch("/checkout", {
     method: "POST",
