@@ -25,7 +25,7 @@ Deployed website on Heroku
 
 Upon landing on the login page, the user must input
 ```
-Username: Fishing    , Password: thebigone
+Username: Fishing  , Password: thebigone
 ```
  in order to be granted access to the website.
 
