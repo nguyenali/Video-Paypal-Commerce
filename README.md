@@ -13,7 +13,7 @@ A mysql database-based e-commerce website that allows the user to buy fishing tu
 
 ## Installation:
 Deployed website on Heroku
-<website link>
+https://videopaypal.herokuapp.com/login
   
 
 ## Developers:
