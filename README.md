@@ -45,19 +45,19 @@ information and submits, a confirmation will be generated notifying them that th
 
 
 ## Technology and Applications used:
-cookie-parser: "^1.4.5",
-dotenv: "^8.2.0",
-express: "^4.17.1",
-express-handlebars: "^5.2.0",
-express-session: "^1.17.1",
-mysql2: "^2.2.5",
-nodemon: "^2.0.6",
-sequelize: "^6.3.5",
-Paypal Sandbox API: "7.33.1",
-Heroku: "12.16.3"
-HTML
-CSS
-Javascript
+* cookie-parser: "^1.4.5",
+* dotenv: "^8.2.0",
+* express: "^4.17.1",
+* express-handlebars: "^5.2.0",
+* express-session: "^1.17.1",
+* mysql2: "^2.2.5",
+* nodemon: "^2.0.6",
+* sequelize: "^6.3.5",
+* Paypal Sandbox API: "7.33.1",
+* Heroku: "12.16.3"
+* HTML
+* CSS
+* Javascript
 
 
 
