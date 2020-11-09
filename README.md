@@ -55,6 +55,7 @@ information and submits, a confirmation will be generated notifying them that th
 * sequelize: "^6.3.5",
 * Paypal Sandbox API: "7.33.1",
 * Heroku: "12.16.3"
+* JawsDB MySQL: "5.7"
 * HTML
 * CSS
 * Javascript
