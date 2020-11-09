@@ -11,8 +11,6 @@ const exphbs = require("express-handlebars");
 const hbs = exphbs.create({ extname: "handlebars" });
 const cookieParser = require("cookie-parser");
 
-// const sequelize = require("sequelize");
-
 // importing models
 const { Purchase, Video, User } = require("./models");
 
@@ -103,12 +101,6 @@ app.post("/checkout", sessionChecker, (req, res) => {
   customerOrders[req.body.customerId] = req.body.cart;
   res.send({ cartSaved: true });
 });
-
-// app.get("/checkout", sessionChecker,(req, res) => {
-//   // customerOrders[req.body.customerId] = req.body.cartItems
-//   customerOrders[req.body.customerId] = req.body.cart;
-//   res.send({ cartSaved: true });
-// });
 
 app.get("/checkout/:id", sessionChecker, async (req, res) => {
   res.render("checkoutpage",
