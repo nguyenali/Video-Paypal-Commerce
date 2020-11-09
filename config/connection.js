@@ -5,7 +5,8 @@ if (process.env.NODE_ENV != "production") {
 const Sequelize = require("sequelize");
 
 const sequelize = new Sequelize(
-  process.env.JAWSDB_URL
+  
+  process.env.JAWSDB_URL,
   
 );
 
