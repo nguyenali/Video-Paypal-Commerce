@@ -11,7 +11,7 @@
 
 A mysql database-based e-commerce website that allows the user to buy fishing tutorial videos to be purchased via Paypal's Sandbox digital transaction application. Upon selecting the video, the user will be able to input their information(e.g., name,email, credit-card information) and submit their payment and see that their video was purchase.
 
-Installation:
+## Installation:
 Deployed website on Heroku
 <website link>
   
